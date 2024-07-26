@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family:"Source Code Pro", monospace;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
 }
 .navbar {
     background-color: black;
@@ -27,7 +28,7 @@
 }
 
 #navbar_logo {
-    background-image: linear-gradient(to top, rgb(96, 88, 88) 0%, rgb(255, 255, 255) 100%);
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 20%, rgb(255, 255, 255) 50%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -38,6 +39,8 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
+    width: 100px;
+    font-weight: 200;
 }
 
 .fa-gem {
@@ -195,6 +198,111 @@
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    #to-about-btn {
+        padding: 1px;
+        height: 50px;
+    }
+
     
 }
 
+/*Home section*/
+.main {
+    background-color: black;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_content {
+    font-weight: 100;
+}
+
+
+/*typing animation setting*/
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+.main_content {
+    box-sizing: border-box;
+    min-height: 20%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.main_container {
+    font-size: 30px;
+    width: 246px;
+    overflow: hidden;
+}
+
+.main_content .text {
+    position: relative;
+    color: rgb(48, 115, 230);
+}
+
+.main_content .text.first-text {
+    margin-left: 30%;
+
+}
+
+.text.description::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);/*should be changed to black at the end*/
+    border-left: 2px solid rgb(48, 115, 230);
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+    40%, 60%{
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+/*introduction before the */
+.introduction {
+    background-color: black;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: 200;
+    padding: 10% 20% 0% 20%;
+}
+
+
+/*get to know me button decoration*/
+.main_btn {
+    display: flex;
+    justify-content:center;
+    padding: 10% 10% 10% 0%;
+}
+
+#to-about-btn {
+    opacity: 50%;
+    width: fit-content;
+    padding: 15px;
+}
+
+#to-about-btn:hover {
+    background-color: rgb(57, 124, 240);
+    color: aliceblue;
+    opacity: 100%;
+    box-shadow: 20px 20px 15px 0 #ababab4d;
+}
+
+#to-about-btn:active {
+    background-color: rgb(57, 124, 240);
+    color: aliceblue;
+    opacity: 70%;
+    transition: 0.3s;
+}
