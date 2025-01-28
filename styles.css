@@ -203,9 +203,22 @@
         padding: 1px;
         height: 50px;
     }
+/*Doesnt work dk why*/
+    .contact-links {
+        flex-direction: column; /* Stack vertically for small screens */
+        gap: 0.5em; /* Reduce spacing */
+    }
 
-    
+    .contact-button {
+        width: 90%; /* Buttons take up almost the entire width */
+        font-size: 0.9em; /* Slightly smaller font size */
+    }
+
+    .contact-button i {
+        font-size: 1em; /* Smaller icons */
+    }
 }
+
 
 /*Home section*/
 .main {
@@ -221,8 +234,8 @@
 
 /*typing animation setting*/
 body {
-    overflow: hidden;
     background-color: black;
+    overflow-y: auto; /* Enable scrolling */
 }
 
 .main_content {
@@ -305,4 +318,70 @@ body {
     color: aliceblue;
     opacity: 70%;
     transition: 0.3s;
+}
+
+.skip-me, .skip-me-2, .placeholder {
+    height: 800px;
+    padding: 2em;
+    margin: 1em 0;
+    border: 1px solid #ccc;
+}
+
+/* Center alignment for the contact-links container */
+.contact-links {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em; /* Space between buttons */
+    height: 100%; /* Fill container height */
+}
+
+/* Styling for the buttons */
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.75em 1.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    background-color: #d4d4d4;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.3s;
+    gap: 0.5em;
+}
+
+.contact-button:nth-child(2) {
+    background-color: #0077b5;
+    color: white;
+}
+
+.contact-button:nth-child(3) {
+    background-color: #e53e3e;
+    color: white;
+}
+
+/* Hover effects for buttons */
+.contact-button:hover {
+    transform: scale(1.05);
+    background-color: #424242;
+    color: white;
+}
+
+.contact-button:nth-child(2):hover {
+    background-color: #005682;
+}
+
+.contact-button:nth-child(3):hover {
+    background-color: #c75454;
+}
+
+
+.contact-button i {
+font-size: 1.5em;
 }
