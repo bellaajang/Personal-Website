@@ -17,7 +17,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <p>
         <nav class="navbar">
             <div class="navbar_container">
 
@@ -32,17 +32,17 @@
                     </a>
                 </li>
                 <li class="navbar_item">
-                    <a href="/about.html" class="navbar_links"><!--in about.html-->
+                    <a class="navbar_links" id="skip-to-About"><!--in index.html-->
                     About
                     </a>
                 </li>
                 <li class="navbar_item">
-                    <a class="navbar_links" id="skip-to-projects-in-About" href="about.html#projects"><!--Projects in about.html-->
+                    <a class="navbar_links" id="skip-to-Projects"><!--Projects in index.html-->
                     Projects
                     </a>
                 </li>
                 <li class="navbar_btn">
-                    <a class="button" href="about.html#contacts" ><!--Contacts in about.html-->
+                    <a class="button" id="skip-to-Contacts" ><!--Contacts in index.html-->
                     Contacts
                     </a>
                 </li>
@@ -58,10 +58,48 @@
                 </span>
 
             </div>
-            <div class="main_btn"><a href="about.html" class="button" id="to-about-btn">
-            Get to know me!</a></div>
+        <div class="skip-me" style="height: 300px;"></div>
+            <!-- <div class="main_btn"><a href="about.html" class="button" id="to-about-btn">
+            Get to know me!</a></div> -->
+            <div class="skip-me-2">
+            <div class="about-section">
+                <img src="/images/memoji.png" alt="memoji" class="memoji">
+                <h1 class="main-title">About Me</h1>
+                <h2 class="side-title">Software Engineering Student</h2>
+                <p>Hello! I'm a Software Engineering student attending the University of Calgary.</p>
+                <p>IN PROGRESS</p>
+                <p>IN PROGRESS</p>
+                <p>IN PROGRESS</p>
+                <p>IN PROGRESS</p>
+                <p>IN PROGRESS</p>
+            </div>
 
-
+            </div>
+            
+            <div class="skip-me-3">
+            <h2>Projects</h2>
+            <p>This is the projects section.</p>
+            
+            </div>
+            <div class="placeholder">
+                <div class="contact-links">
+              
+                  <!-- GitHub Button -->
+                  <a href="https://github.com/bellaajang" target="_blank" class="contact-button" aria-label="GitHub">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+              
+                  <!-- LinkedIn Button -->
+                  <a href="www.linkedin.com/in/suyoung-bella-jang" target="_blank" class="contact-button" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                  </a>
+              
+                  <!-- Resume PDF Button -->
+                  <a href="resume.pdf" target="_blank" class="contact-button" aria-label="Resume">
+                    <i class="fas fa-file-pdf"></i> Resume
+                  </a>
+                </div>
+              </div>
     <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/f7d697e7e1.js" crossorigin="anonymous"></script>
     </body>

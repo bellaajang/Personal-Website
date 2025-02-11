@@ -28,28 +28,40 @@ textLoad(); // Initial load
 // Unhide the content and jump to the right place on the page at the same time
 function skipContent(className) {
     const skipSection = document.getElementsByClassName(className)[0];
-    
     if (skipSection) {
-      // Unhide the section if it is hidden
-      skipSection.style.display = 'block';  // Or 'flex' if you are using flexbox layout, depending on your CSS.
-
-      // Scroll to the section
-    window.scrollTo({
-    top: skipSection.offsetTop,  // Adjust to scroll to the top of the section
-    behavior: 'smooth',
-    });
+        window.scrollTo({
+        top: skipSection.offsetTop + skipSection.offsetHeight -80,
+        behavior: 'smooth',
+        });
     } else {
-    console.error(`No element found with class name: ${className}`);
+        console.error(`No element found with class name: ${className}`);
     }
-}
+    }
 
   // Event listeners for each button
-document.getElementById('skip-to-projects-in-About').addEventListener('click', () => {
-    skipContent('skip-me'); // Skip the first section
+document.getElementById('skip-to-About').addEventListener('click', () => {
+skipContent('skip-me'); // Skip the first section
 });
 
-document.getElementById('skip-to-contacts-in-About').addEventListener('click', () => {
-    skipContent('skip-me-2'); // Skip the second section
+document.getElementById('skip-to-Projects').addEventListener('click', () => {
+skipContent('skip-me-2'); // Skip the second section
 });
 
+// Event listeners for each button
+document.getElementById('skip-to-Contacts').addEventListener('click', () => {
+skipContent('skip-me-3'); // Skip the first section
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".skip-me-2");
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+                observer.unobserve(entry.target); // Stop observing after animation
+            }
+        });
+    }, { threshold: 0.3 }); // Trigger when 30% of element is visible
+    
+    observer.observe(container);
+})

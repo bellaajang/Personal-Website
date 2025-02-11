@@ -320,13 +320,53 @@ body {
     transition: 0.3s;
 }
 
-.skip-me, .skip-me-2, .placeholder {
-    height: 800px;
-    padding: 2em;
-    margin: 1em 0;
-    border: 1px solid #ccc;
-    color: white;
+.skip-me-3, .placeholder {
+    height: 1000px;/*will be changed later */
 }
+
+/*About Section*/
+.skip-me-2{
+    color: black;
+    width: 60%;
+    margin: auto;
+    background: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.516);
+    margin-top: 100px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-section {
+    text-align: left;
+}
+
+.memoji {
+    float: left;
+    width: 20%;
+    height: auto;
+    margin-right: 15px;
+}
+
+.side-title{
+    font-size: 70%;
+}
+
+p{
+    font-weight: 400;
+    font-size: small;
+}
+/*About Section done*/
+
+/*fading effect*/
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 
 /* Center alignment for the contact-links container */
 .contact-links {
@@ -336,7 +376,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1em; /* Space between buttons */
-    height: 100%; /* Fill container height */
 }
 
 /* Styling for the buttons */
@@ -385,4 +424,15 @@ body {
 
 .contact-button i {
 font-size: 1.5em;
+}
+
+#memoji{
+    width: 70%;
+}
+
+.flex_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
